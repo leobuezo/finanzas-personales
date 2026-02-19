@@ -40,11 +40,11 @@ export function BalanceSummary() {
   ];
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
       {cards.map((card) => (
-        <Card key={card.title}>
+        <Card key={card.title} className="transition-shadow hover:shadow-md">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
+            <CardTitle className="text-sm font-medium text-muted-foreground">
               {card.title}
             </CardTitle>
             <div className={`rounded-full p-2 ${card.bgColor}`}>
@@ -52,7 +52,7 @@ export function BalanceSummary() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className={`text-2xl font-bold ${card.color}`}>
+            <div className={`text-xl font-bold sm:text-2xl ${card.color}`}>
               {formatCurrency(card.value)}
             </div>
           </CardContent>

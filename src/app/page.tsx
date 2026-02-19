@@ -6,11 +6,24 @@ import { TransactionList } from "@/components/transactions/transaction-list";
 
 export default function Home() {
   return (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+    <div className="mx-auto max-w-5xl space-y-6 sm:space-y-8">
+      <div>
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          Dashboard
+        </h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Resumen de tus finanzas personales
+        </p>
+      </div>
       <BalanceSummary />
-      <TransactionForm />
-      <TransactionList />
+      <div className="grid gap-6 lg:grid-cols-5">
+        <div className="lg:col-span-2">
+          <TransactionForm />
+        </div>
+        <div className="lg:col-span-3">
+          <TransactionList />
+        </div>
+      </div>
     </div>
   );
 }

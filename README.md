@@ -207,11 +207,15 @@ Los calculos financieros viven en `services/transaction.service.ts` como **funci
 - Pagina dashboard integrando los 3 componentes
 - Layout con header y container
 
-### Fase 3 — Mejoras visuales y optimizacion (pendiente)
+### Fase 3 — Mejoras visuales y optimizacion ✅
 
-- Pulido visual y responsive
-- Optimizacion de rendimiento
-- Limpieza general de codigo
+- **Layout mejorado** — Header sticky con blur y emoji branding, footer con creditos, flex-col para push del footer
+- **Dashboard responsive** — Formulario y lista side-by-side en pantallas grandes (lg:grid-cols-5), stacked en mobile
+- **BalanceSummary** — Cards 1-col en mobile / 3-col en sm+, hover shadow, titulos muted, font responsive
+- **TransactionForm** — Layout vertical para sidebar, boton full-width, feedback visual de exito (checkmark 2s)
+- **TransactionList** — Badge completo en desktop / solo emoji en mobile, descripcion truncada, texto categoria en subtitulo mobile, filtros responsive, estado vacio por filtro con icono
+- **Formateo** — Moneda sin decimales innecesarios, date parsing timezone-safe (evita offset UTC)
+- **CSS** — Font-feature-settings para mejor tipografia, utilidad no-scrollbar
 
 ---
 
